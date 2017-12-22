@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class GenericClassTest {
 
     @Test
-    public void testUsingRawType() {
+    public void testOnRawTypeClass() {
         GenericClass type = new GenericClass();
 
         type.setT("Hello");
