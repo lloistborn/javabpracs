@@ -1,6 +1,9 @@
 package com.faisal.javabpracs.DataStructure;
 
 // http://crunchify.com/how-to-implement-a-linkedlist-class-from-scratch-in-java/
+// TODO
+// add unit test
+
 public class LinkedList {
     private static int counter;
     private Node head;
