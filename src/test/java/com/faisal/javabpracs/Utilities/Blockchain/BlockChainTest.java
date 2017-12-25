@@ -25,10 +25,10 @@ public class BlockChainTest {
         BlockChain coin = new BlockChain();
 
         Date now1 = new Date();
-        coin.addBlock(new Block(1, now1, "Second Block"));
+        coin.addBlock(new Block(1, now1, "first Block"));
 
         Date now2 = new Date();
-        coin.addBlock(new Block(2, now2, "Third Block"));
+        coin.addBlock(new Block(2, now2, "second Block"));
 
         List allCoin = coin.getChain();
 
@@ -36,6 +36,13 @@ public class BlockChainTest {
         String currentHashValue = ((Block) allCoin.get(2)).getPreviousHashVal();
 
         assertEquals(previousHashValue, currentHashValue);
+
+        // alter data of block 1, then calculate new hash value
+        ((Block) allCoin.get(1)).setData("Second block modified");
+        Block alteredBlock = (Block) allCoin.get(1);
+        String newHashValue = alteredBlock.calculateHash();
+        
+        assertNotSame(newHashValue, currentHashValue);
     }
 
 }

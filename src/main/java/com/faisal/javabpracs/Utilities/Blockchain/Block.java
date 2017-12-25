@@ -29,6 +29,14 @@ public class Block {
         this.currentHashVal = this.calculateHash();
     }
 
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getData() {
+        return data;
+    }
+
     public void setPreviousHashVal(String previousHashVal) {
         this.previousHashVal = previousHashVal;
     }
