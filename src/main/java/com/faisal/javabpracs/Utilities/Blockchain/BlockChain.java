@@ -24,6 +24,7 @@ public class BlockChain {
         String previousHashVal = ((Block) this.getLatestBlock()).getCurrentHashVal();
 
         newBlock.setPreviousHashVal(previousHashVal);
+        newBlock.mineBlock(5);
 
         this.chain.add(newBlock);
     }

@@ -8,18 +8,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class BlockChainTest {
-
-    @Test
-    public void addBlock() {
-        BlockChain coin = new BlockChain();
-
-        Date now = new Date();
-        coin.addBlock(new Block(1, now, "Second Block"));
-        coin.addBlock(new Block(2, now, "Third Block"));
-
-        assertNotNull(coin);
-    }
-
     @Test
     public void isChainValid() {
         BlockChain coin = new BlockChain();
@@ -38,11 +26,10 @@ public class BlockChainTest {
         assertEquals(previousHashValue, currentHashValue);
 
         // alter data of block 1, then calculate new hash value
-        ((Block) allCoin.get(1)).setData("Second block modified");
+        ((Block) allCoin.get(1)).setData("first block modified");
         Block alteredBlock = (Block) allCoin.get(1);
         String newHashValue = alteredBlock.calculateHash();
-        
+
         assertNotSame(newHashValue, currentHashValue);
     }
-
 }
