@@ -27,4 +27,12 @@ public class BlockChain {
 
         this.chain.add(newBlock);
     }
+
+    public List getChain() {
+        return chain;
+    }
+
+    public void setChain(List chain) {
+        this.chain = chain;
+    }
 }

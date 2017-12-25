@@ -33,6 +33,10 @@ public class Block {
         this.previousHashVal = previousHashVal;
     }
 
+    public String getPreviousHashVal() {
+        return previousHashVal;
+    }
+
     public String getCurrentHashVal() {
         return currentHashVal;
     }
