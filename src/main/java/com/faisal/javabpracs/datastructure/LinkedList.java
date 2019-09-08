@@ -1,4 +1,4 @@
-package com.faisal.javabpracs.DataStructure;
+package com.faisal.javabpracs.datastructure;
 
 // http://crunchify.com/how-to-implement-a-linkedlist-class-from-scratch-in-java/
 public class LinkedList {

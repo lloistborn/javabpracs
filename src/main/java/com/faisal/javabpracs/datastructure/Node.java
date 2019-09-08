@@ -1,4 +1,4 @@
-package com.faisal.javabpracs.DataStructure;
+package com.faisal.javabpracs.datastructure;
 
 public class Node {
   Node next;
